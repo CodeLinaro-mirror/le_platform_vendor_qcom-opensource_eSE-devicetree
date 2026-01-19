@@ -31,6 +31,10 @@ ifeq ($(CONFIG_ARCH_VIENNA),y)
 dtbo-y += vienna-ese.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_MALABAR),y)
+dtbo-y += malabar-ese.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo

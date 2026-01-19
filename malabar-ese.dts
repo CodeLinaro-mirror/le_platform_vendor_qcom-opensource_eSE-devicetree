@@ -1,0 +1,24 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ */
+
+/dts-v1/;
+/plugin/;
+
+&soc {
+	st54spi_gpio {
+		status = "ok";
+		compatible = "st,st54spi_gpio";
+		/* gpio used as SE_nRESET */
+		gpio-power_nreset = <&tlmm 78 0x00>;
+	};
+};
+
+/ {
+	model = "Qualcomm Technologies, Inc. Chora SoC";
+	compatible = "qcom,chora";
+	qcom,board-id = <0x10021 0>, <0x10001 0>, <0x10008 0>, <0x1000B 0>,
+			<0x10015 0>, <0x20001 0>;
+	qcom,msm-id = <733 0x10000>, <757 0x10000>;
+};
