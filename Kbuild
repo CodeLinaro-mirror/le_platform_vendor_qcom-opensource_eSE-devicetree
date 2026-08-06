@@ -35,6 +35,14 @@ ifeq ($(CONFIG_ARCH_MALABAR),y)
 dtbo-y += malabar-ese.dtbo
 endif
 
+ifeq ($(CONFIG_ARCH_SHIKRA),y)
+dtbo-y += shikra-ese.dtbo
+endif
+
+ifeq ($(CONFIG_ARCH_BOURTZI),y)
+dtbo-y += bourtzi-ese.dtbo
+endif
+
 always-y	:= $(dtb-y) $(dtbo-y)
 subdir-y	:= $(dts-dirs)
 clean-files	:= *.dtb *.dtbo
